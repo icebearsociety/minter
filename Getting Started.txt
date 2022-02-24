@@ -1,0 +1,50 @@
+The application consists of two main parts:
+
+1. The built state of the project which is the "build" folder
+  - It is the ready files that will later be deployed to the hosting server
+
+2. The actual production files which are everything else, especially, "src" & "public" folders
+  - "public" contains the icons and SEO configurations and the index.html file
+  - index.html should only be used to add icons, fonts, metadata, etc. to the head tag. Do not change the body tag for simple projects.
+
+  - "src" contains all the important parts of the app. react components, JavaScript files, css files, all assets
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+The app files structure
+
+icebear-app
+├── package.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── more icon images
+│   ├── site.webmanifest
+├── src
+|   ├── App.js - react.js file that renders all the components
+|   ├── App.css - css file that holds general styles
+|   ├── index.js - react.js file that renders App.js
+|   ├── assets
+|   |   ├── fonts
+|   |   ├── images
+|   |   ├── layers
+|   └── components
+|       └── layout
+|           ├── all react components - names are descriptive
+|           └── css
+|               ├── all css files for the components - names are descriptive
+└── build
+
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+Scripts you will need to use:
+
+first: download node.js from here: https://nodejs.org/en/download/
+
+from the command line write these Scripts
+
+1. npm install
+
+2. npm start
+  to start developing your application
+
+3. npm run build
+  to build your application and make it ready for production
