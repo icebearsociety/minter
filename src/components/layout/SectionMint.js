@@ -87,7 +87,6 @@ const SectionMint = () => {
         alert(`Couldn't process the transaction`);
       })
       .then((receipt) => {
-        console.log(receipt);
         setClaimingNft(false);
         alert("Mint Successful!");
         dispatch(fetchCirculatingSupply());
