@@ -1,6 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      .loader {
+        border-radius: 50%;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .box {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        background: #39bcee;
+      }
+
+      #snow {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 50%;
+        background: rgb(255, 255, 255);
+      }
+
+      #bear {
+        position: absolute;
+        top: 51%;
+        left: 45vw;
+        width: 10%;
+        height: 20%;
+        border-radius: 50%;
+        background: white;
+        animation: bear ease-in-out 15s;
+      }
+
+      @keyframes bear {
+        0%,
+        20%,
+        100% {
+          top: 50%;
+        }
+        25%,
+        90% {
+          top: 40%;
+        }
+      }
+
+      .ear {
+        position: absolute;
+        top: 0%;
+        width: 30%;
+        height: 20%;
+        border-radius: 50%;
+        background: white;
+      }
+
+      #l-ear {
+        left: 0%;
+      }
+
+      #r-ear {
+        right: 0%;
+        animation: ear linear 0.2s 9s 2;
+      }
+
+      @keyframes ear {
+        0%,
+        100% {
+          top: 5%;
+        }
+        50% {
+          top: 0;
+        }
+      }
+
+      .eye {
+        position: absolute;
+        top: 30%;
+        width: 10%;
+        height: 0%;
+        border-radius: 50%;
+        background: black;
+        animation: eyes linear 15s;
+      }
+
+      @keyframes eyes {
+        10%,
+        20%,
+        45%,
+        55%,
+        65%,
+        80% {
+          height: 5%;
+        }
+        0%,
+        3%,
+        30%,
+        40%,
+        60%,
+        90%,
+        100% {
+          height: 0%;
+        }
+      }
+
+      #l-eye {
+        left: 20%;
+      }
+
+      #r-eye {
+        right: 20%;
+      }
+
+      #nose {
+        position: absolute;
+        top: 35%;
+        left: 40%;
+        width: 20%;
+        height: 10%;
+        border-radius: 50%;
+        background: black;
+        animation: nose linear 0.3s 8s;
+      }
+
+      @keyframes nose {
+        0%,
+        100% {
+          left: 38%;
+        }
+        50% {
+          left: 42%;
+        }
+      }
+
+      #mouth {
+        position: absolute;
+        top: 50%;
+        right: 35%;
+        width: 0%;
+        height: 0%;
+        border-radius: 50%;
+        background: black;
+        animation: mouth ease-in 15s;
+      }
+
+      @keyframes mouth {
+        0%,
+        20%,
+        50%,
+        100% {
+          height: 0%;
+          width: 0%;
+        }
+        30%,
+        45% {
+          height: 35%;
+          width: 25%;
+        }
+        40% {
+          height: 37%;
+          width: 30%;
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -28,9 +200,59 @@
     />
     <link rel="manifest" href="%PUBLIC_URL%/site.webmanifest" />
     <title>IceBear Society</title>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "../www.googletagmanager.com/gtm5445.html?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-MJTBCZF");
+    </script>
+    <!-- End Google Tag Manager -->
+    <meta
+      name="“facebook-domain-verification”"
+      content="“ekepkevjlb51h1zt7mma6jsuiuw74r”"
+    />
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-KSS6K22709"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-KSS6K22709");
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <div class="loader-container">
+      <div class="loader">
+        <div class="box">
+          <div id="snow"></div>
+          <div id="bear">
+            <div class="ear" id="l-ear"></div>
+            <div class="ear" id="r-ear"></div>
+            <div class="eye" id="l-eye"></div>
+            <div class="eye" id="r-eye"></div>
+            <div id="nose"></div>
+            <div id="mouth"></div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -12,6 +12,7 @@ import MyBears from "./pages/MyBears";
 function App() {
   const dispatch = useDispatch();
   const minterContract = useSelector((state) => state.minterContract);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
     if (minterContract.contract === null) dispatch(loadMinterContract());
@@ -20,6 +21,24 @@ function App() {
   useEffect(() => {
     dispatch(fetchCirculatingSupply());
   }, []);
+
+  function fakeRequest() {
+    return new Promise((resolve) => setTimeout(() => resolve(), 9500));
+  }
+
+  useEffect(() => {
+    fakeRequest().then(() => {
+      const el = document.querySelector(".loader-container");
+      if (el) {
+        el.remove();
+        setLoading(!isLoading);
+      }
+    });
+  }, []);
+
+  if (isLoading) {
+    return null;
+  }
 
   return (
     <div>
