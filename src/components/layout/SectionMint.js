@@ -79,13 +79,12 @@ const SectionMint = () => {
         ),
       })
       .on("transactionHash", function (hash) {
-        alert(`Transaction Sumbitted: ${hash}`);
+        let txHash = hash;
+        alert(`Transaction Sumbitted: ${txHash}`);
       })
       .on("error", (err) => {
         setClaimingNft(false);
-        alert(
-          "Something went wrong! Please check your transaction and try again"
-        );
+        alert(`Couldn't process the transaction`);
       })
       .then((receipt) => {
         console.log(receipt);

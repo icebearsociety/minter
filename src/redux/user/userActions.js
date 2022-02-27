@@ -1,4 +1,5 @@
 import Web3 from "web3";
+import { loadMinterContract } from "../minter-contract/minterActions";
 // import setAlert from "../alerts/alertActions";
 
 const connectRequest = () => {
@@ -59,6 +60,8 @@ export const connect = () => {
             })
           );
 
+          dispatch(loadMinterContract());
+
           // Add listeners start
           ethereum.on("accountsChanged", (accounts) => {
             dispatch(updateAccount(accounts[0]));
@@ -83,7 +86,7 @@ export const connect = () => {
           );
         }
       } catch (err) {
-        alert("An unexpected Error Occurred.");
+        alert("Please Log into metamsk!");
         // dispatch(
         //   setAlert(
         //     `An Error Occurred. Make sure you are logged into you metamask wallet`,

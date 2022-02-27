@@ -4,6 +4,7 @@ import foxIcon from "../../assets/images/fox-icon.svg";
 import discordIcon from "../../assets/images/discord.svg";
 import { useDispatch, useSelector } from "react-redux";
 import { connect, disconnect } from "../../redux/user/userActions";
+import { Link } from "react-router-dom";
 
 const WalletCard = () => {
   // const [userBalance, setUserBalance] = useState(null)
@@ -50,7 +51,7 @@ const WalletCard = () => {
       className="animate-btn btn"
       style={{
         height: "60px",
-        marginLeft: "15px",
+        marginLeft: "5px",
         backgroundColor: "#02b5ca",
         color: "white",
       }}
@@ -65,7 +66,7 @@ const WalletCard = () => {
 const NavLinks = (props) => {
   return (
     <ul className={`nav-menu list-unstyled ${props.className}`}>
-      <li className="btn-collection">
+      <li className="btn-collection column-list">
         <a href="https://discord.gg/xfYJtKzrby">
           <Button className="animate-btn">
             Join the Server{" "}
@@ -84,6 +85,10 @@ const NavLinks = (props) => {
         >
           Mint
         </a>
+
+        <Link className="animate-btn btn" to="/my-bears">
+          My Bears
+        </Link>
 
         <WalletCard />
       </li>

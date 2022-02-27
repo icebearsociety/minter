@@ -110,7 +110,7 @@ export const loadMinterContract = () => {
           );
         }
       } catch (err) {
-        alert("An unexpected Error Occurred.");
+        alert("Please Log into metamsk!");
         dispatch(walletConnectionFailure("Something went wrong."));
       }
     } else {
@@ -121,11 +121,11 @@ export const loadMinterContract = () => {
 };
 
 const updateSupply = async (_totalSupply) => {
-  fetch(``, {
+  fetch(`http://localhost:7010/api/attributes/uss`, {
     method: "POST",
 
     body: JSON.stringify({
-      circulatingSupply: _totalSupply,
+      currentSupply: _totalSupply,
     }),
 
     headers: {
@@ -186,11 +186,11 @@ export const fetchNfts = () => {
       let nftIds = nftsInWallet;
       let numberArray = nftIds.map(Number);
 
-      fetch(``, {
+      fetch(`http://localhost:7010/api/attributes/mybears`, {
         method: "POST",
 
         body: JSON.stringify({
-          ownedTokens: numberArray,
+          ownedBears: numberArray,
         }),
 
         headers: {
