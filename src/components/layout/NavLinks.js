@@ -6,6 +6,9 @@ import { useDispatch, useSelector } from "react-redux";
 import { connect, disconnect } from "../../redux/user/userActions";
 import { Link } from "react-router-dom";
 
+import umbriaicon from "../../assets/images/UmbriaPretty.webp";
+
+
 const WalletCard = () => {
   // const [userBalance, setUserBalance] = useState(null)
   const [connButtonText, setConnButtonText] = useState("Connect");
@@ -57,15 +60,15 @@ const WalletCard = () => {
       }}
       onClick={handleConnectClick}
     >
-      <img src={foxIcon} className="fox-icon" alt="fox icon" />
       {connButtonText}
+      <img src={foxIcon} className="fox-icon" alt="fox icon" />
     </Button>
   );
 };
 
 const NavLinks = (props) => {
   return (
-    <ul className={`nav-menu list-unstyled ${props.className}`}>
+    <ul className={`nav-menu ${props.className}`}>
       <li className="btn-collection column-list">
         <a href="https://discord.gg/xfYJtKzrby">
           <Button className="animate-btn">
@@ -76,6 +79,13 @@ const NavLinks = (props) => {
               alt="join the discord"
             />
           </Button>
+        </a>
+
+        <a href="https://bridge.umbria.network/bridge/ethereum-fantom/eth">
+          <button className="animate-btn btn">
+            Bridge to FTM!{" "}
+            <img src={umbriaicon} className="fox-icon" alt="fox icon" />
+          </button>
         </a>
 
         <a

@@ -2,6 +2,19 @@
   text-align: center;
 }
 
+.pakaPaka {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 12px;
+  text-align: center;
+}
+
+.hypeBear{
+  padding:12px;
+}
+
 .team-img {
   width: 100%;
   border-radius: 50%;
@@ -116,7 +129,7 @@
 }
 
 .team-img:hover {
-  opacity : 1;
+  opacity: 1;
 }
 
 .socials a {
