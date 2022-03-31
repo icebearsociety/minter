@@ -89,7 +89,7 @@ export const loadMinterContract = () => {
         if (networkId == 250 || 4002) {
           const MinterContractObj = new web3.eth.Contract(
             MinterContract,
-            `0x44B51e6245443795FC04E86C2F7393Ea8b70532B`
+            `0x7bd85467de074b933d2992679c9f9ddd7ea01ed3`
           );
           dispatch(
             loadContractSuccess({
@@ -121,17 +121,20 @@ export const loadMinterContract = () => {
 };
 
 const updateSupply = async (_totalSupply) => {
-  fetch(`http://localhost:7010/api/attributes/uss`, {
-    method: "POST",
+  fetch(
+    `https://api1.nftgarage.world/serve/supply/update-supply/icebearsociety`,
+    {
+      method: "POST",
 
-    body: JSON.stringify({
-      currentSupply: _totalSupply,
-    }),
+      body: JSON.stringify({
+        currentSupply: _totalSupply,
+      }),
 
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  }).catch((err) => console.log("Update Error"));
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    }
+  ).catch((err) => console.log("Update Error"));
 };
 
 export const fetchCirculatingSupply = () => {
@@ -186,17 +189,20 @@ export const fetchNfts = () => {
       let nftIds = nftsInWallet;
       let numberArray = nftIds.map(Number);
 
-      fetch(`http://localhost:7010/api/attributes/mybears`, {
-        method: "POST",
+      fetch(
+        `https://api1.nftgarage.world/serve/assets/icebearsociety/my-nfts`,
+        {
+          method: "POST",
 
-        body: JSON.stringify({
-          ownedBears: numberArray,
-        }),
+          body: JSON.stringify({
+            ownedTokens: numberArray,
+          }),
 
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      })
+          headers: {
+            "Content-type": "application/json; charset=UTF-8",
+          },
+        }
+      )
         .then((res) => res.json())
         .then((send) => dispatch(fetchMyNFTsSuccess([...send])))
         .catch((err) => console.log("Couldnt get Nfts"));

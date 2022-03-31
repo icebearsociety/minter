@@ -71,10 +71,10 @@ const SectionMint = () => {
       .mint(user.account, _amount)
       .send({
         gasLimit: "750000",
-        to: "0x44B51e6245443795FC04E86C2F7393Ea8b70532B",
+        to: "0x7bd85467de074b933d2992679c9f9ddd7ea01ed3",
         from: user.account,
         value: minterContract.web3.utils.toWei(
-          (0.01 * _amount).toString(),
+          (0.1 * _amount).toString(),
           "ether"
         ),
       })
