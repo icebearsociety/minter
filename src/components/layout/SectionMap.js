@@ -1,7 +1,7 @@
-import './css/section-map.css';
+import "./css/section-map.css";
 
-import roadDots from '../../assets/layers/roadmap lines.png';
-import MediaQuery from 'react-responsive';
+import roadDots from "../../assets/layers/roadmap lines.png";
+import MediaQuery from "react-responsive";
 
 const SectionMap = () => {
   return (
@@ -15,6 +15,17 @@ const SectionMap = () => {
       <ul className="container-narrow road-list">
         <li>
           <ul className="road-list-sec list-1">
+            <div className="geo">
+              <li>
+                <h1
+                  className="text-gradient"
+                  text-align="center"
+                  margin-right="auto"
+                >
+                  PHASE 0 : CUB
+                </h1>
+              </li>
+            </div>
             <li className="text-gradient">Create ICY Polar Bear Art</li>
             <li className="text-gradient">
               Marketing Impulse To Build A Robust Community
@@ -29,6 +40,17 @@ const SectionMap = () => {
         </li>
         <li>
           <ul className="road-list-sec list-2">
+            <div className="geo">
+              <li>
+                <h1
+                  className="text-gradient"
+                  text-align="center"
+                  margin-right="auto"
+                >
+                  PHASE 1 : ICED OUT
+                </h1>
+              </li>
+            </div>
             <li className="text-gradient">Updated Website Reveal</li>
             <li className="text-gradient">Announce Mint Price and Mint Day</li>
             <li className="text-gradient">Start Minting (& Sell Out!)</li>
@@ -39,29 +61,59 @@ const SectionMap = () => {
         </li>
         <li>
           <ul className="road-list-sec list-3">
-            <li className="text-gradient">Create ICY Polar Bear Art</li>
+            <div className="geo">
+              <li>
+                <h1
+                  className="text-gradient"
+                  text-align="center"
+                  margin-right="auto"
+                >
+                  Phase 2 : ARCTIC HABITAT
+                </h1>
+              </li>
+            </div>
             <li className="text-gradient">
-              Marketing Impulse To Build A Robust Community
+              Putting Forward Donation and Charity Models To All Holders
             </li>
             <li className="text-gradient">
-              Giveaways For Early Supporters Of The Project
+              Selecting The Best Donation Strategies On Consensus Of The
+              Community
             </li>
             <li className="text-gradient">
-              Collaboration with projects on the Fantom Ecosystem
+              Donating to World Wildlife Fund (WWF) & Saving Polar Bears In The
+              Arctic
+            </li>
+            <li className="text-gradient">
+              Personalised Certificates For All Holders Who Helped Saving The
+              Future Of Polar Bears
             </li>
           </ul>
         </li>
         <li>
           <ul className="road-list-sec list-4">
-            <li className="text-gradient">Create ICY Polar Bear Art</li>
+            <div className="geo">
+              <li>
+                <h1
+                  className="text-gradient"
+                  text-align="center"
+                  margin-right="auto"
+                >
+                  Phase 3 : BULLISH BEAR
+                </h1>
+              </li>
+            </div>
             <li className="text-gradient">
-              Marketing Impulse To Build A Robust Community
+              Establish Ice Bear Society DAO to give holders vote on Future
+              Development Plans
             </li>
             <li className="text-gradient">
-              Giveaways For Early Supporters Of The Project
+              Exclusive Giveaways and Confidential Perks For The Holders
             </li>
             <li className="text-gradient">
-              Collaboration with projects on the Fantom Ecosystem
+              Expand Charitable Aspects of Ice Bear Society
+            </li>
+            <li className="text-gradient">
+              Supplemental Research & Development
             </li>
           </ul>
         </li>

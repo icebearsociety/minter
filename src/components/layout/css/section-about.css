@@ -37,6 +37,9 @@
   .about-text {
     line-height: 2;
   }
+  .abandoned{
+    visibility: hidden;
+  }
 }
 
 /* 48em = 768px || large phone screen size */
@@ -47,6 +50,9 @@
 
     letter-spacing: 1.5px;
   }
+    .abandoned{
+    visibility: hidden;
+  }
 }
 
 /* 36em = 576px || mid phone screen size */
@@ -55,6 +61,9 @@
     height: 30rem;
 
     object-fit: cover;
+  }
+    .abandoned{
+    visibility: hidden;
   }
 
   .about-text {

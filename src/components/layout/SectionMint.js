@@ -7,6 +7,9 @@ import { useSelector, useDispatch } from "react-redux";
 import { connect } from "../../redux/user/userActions";
 import { fetchCirculatingSupply } from "../../redux/minter-contract/minterActions";
 
+import umbriaicon from "../../assets/images/UmbriaPretty.webp";
+
+
 const SectionMint = () => {
   const [counter, setCounter] = useState(1);
   const [claimingNft, setClaimingNft] = useState(false);
@@ -105,7 +108,7 @@ const SectionMint = () => {
             : circulatingSupply
             ? circulatingSupply
             : null}
-          /2222
+          /3333
         </h2>
       </div>
       {!isConnected && (
@@ -160,6 +163,16 @@ const SectionMint = () => {
           </button>
         </a>
       </div> */}
+
+      <br></br>
+      <br></br>
+      <a href="https://bridge.umbria.network/bridge/ethereum-fantom/eth">
+        <button className="btn gradient-btn animate-btn">
+          Bridge to FTM!{" "}
+          <img src={umbriaicon} className="fox-icon" alt="fox icon" />
+        </button>
+      </a>
+
       <p className="mint-text">
         The Ice Bear Society is an NFT collection that strives to use the power
         of NFTs for good
