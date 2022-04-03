@@ -45,33 +45,40 @@ const BearCard = ({ myBears }) => {
                   border: "1px solid #66aff5",
                 }}
               />
-              <div style={{ color: "black", marginLeft: "20px" }}>
+              <div
+                style={{ color: "black", marginLeft: "20px", width: "100%" }}
+              >
                 <P>
-                  <Trait>Rarity:</Trait>&nbsp;{modalData?.attributes[0].value}
+                  <Trait>Background:</Trait>&nbsp;
+                  {modalData?.attributes[0].value}
                 </P>
                 <br />
                 <P>
-                  <Trait>Mouth: </Trait>&nbsp; {modalData?.attributes[1].value}
+                  <Trait>Backwear: </Trait>&nbsp;{" "}
+                  {modalData?.attributes[1].value}
                 </P>
                 <br />
                 <P>
-                  <Trait>Tops:</Trait>&nbsp; {modalData?.attributes[2].value}{" "}
+                  <Trait>Clothing:</Trait>&nbsp;{" "}
+                  {modalData?.attributes[2].value}{" "}
                 </P>
                 <br />
                 <P>
-                  <Trait>Face:</Trait>&nbsp; {modalData?.attributes[3].value}
+                  <Trait>Eyewear:</Trait>&nbsp; {modalData?.attributes[3].value}
                 </P>
                 <br />
                 <P>
-                  <Trait>Head: </Trait>&nbsp; {modalData?.attributes[4].value}
+                  <Trait>Headwear: </Trait>&nbsp;{" "}
+                  {modalData?.attributes[4].value}
                 </P>
                 <br />
                 <P>
-                  <Trait>Neck:</Trait>&nbsp; {modalData?.attributes[5].value}
+                  <Trait>Mouthpiece:</Trait>&nbsp;{" "}
+                  {modalData?.attributes[5].value}
                 </P>
                 <br />
                 <P>
-                  <Trait>Back</Trait>&nbsp; {modalData?.attributes[6].value}
+                  <Trait>Neckwear</Trait>&nbsp; {modalData?.attributes[6].value}
                 </P>
               </div>
             </Fragment>
@@ -91,8 +98,8 @@ const BearCard = ({ myBears }) => {
                   <Card.Title style={{ color: "#66aff5" }}>
                     Bear #{_.tokenId}
                   </Card.Title>
-                  <CardText rarity={_.attributes[0].value}>
-                    {_.attributes[0].value}
+                  <CardText rarity={_.attributes[7].value.toLowerCase()}>
+                    {_.attributes[7].value}
                   </CardText>
                 </CardWrap>
               </Card.Body>
