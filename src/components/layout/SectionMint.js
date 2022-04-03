@@ -8,6 +8,14 @@ import { connect } from "../../redux/user/userActions";
 import { fetchCirculatingSupply } from "../../redux/minter-contract/minterActions";
 
 import umbriaicon from "../../assets/images/UmbriaPretty.webp";
+import headicon from "../../assets/images/head-icon.webp";
+
+import MediaQuery from "react-responsive";
+
+
+
+import { Link } from "react-router-dom";
+
 
 const SectionMint = () => {
   const [counter, setCounter] = useState(1);
@@ -171,6 +179,27 @@ const SectionMint = () => {
           <img src={umbriaicon} className="fox-icon" alt="fox icon" />
         </button>
       </a>
+
+      <br></br><br></br>
+
+      {/* <span class="tab"></span> */}
+
+
+
+      {/* 
+      <br></br>
+      <br></br> */}
+
+      {/* <a href="/my-bears">
+        <button className="btn gradient-btn animate-btn">
+          My Bears
+        </button>
+      </a> */}
+
+      <Link className="btn gradient-btn animate-btn" to="/my-bears">
+        My Bears
+        <img src={headicon} className="fox-icon" alt="fox icon" />
+      </Link>
 
       <p className="mint-text">
         The Ice Bear Society is an NFT collection that strives to use the power

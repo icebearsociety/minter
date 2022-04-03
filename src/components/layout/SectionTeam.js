@@ -21,6 +21,8 @@ import img5 from "../../assets/images/0013.png";
 import img6 from "../../assets/images/0015.png";
 import img7 from "../../assets/images/0019.png";
 import img8 from "../../assets/images/0020.png";
+import img9 from "../../assets/images/0003.png";
+
 
 const SectionTeam = () => {
   return (
@@ -240,7 +242,7 @@ const SectionTeam = () => {
                 </div>
               </div>
               <h6 class="fi1-text">Rahul Arepaka</h6>
-              <span className="fi-text">Front End Developer</span>
+              <span className="fi-text">Partnerships | Tech</span>
               <br></br>
               <a href="https://www.instagram.com/rahularepaka/">
                 <svg
@@ -424,7 +426,7 @@ const SectionTeam = () => {
           <div class="col-md-2 col-sm-2 team-wrap hypeBear">
             <div class="team-member last text-center">
               <div class="team-img">
-                <img className="team-img img-fluid" src={img4} />
+                <img className="team-img img-fluid" src={img9} />
                 <div class="overlay">
                   <div class="team-details text-center">
                     <div class="socials mt-20">

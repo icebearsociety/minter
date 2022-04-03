@@ -12,6 +12,11 @@
   box-shadow: inset 0 0 1rem 3px rgb(13 98 214 / 56%);
 }
 
+span.tab {
+  padding: 0 5px;
+  /* Or desired space*/
+}
+
 .mint-title {
   margin-bottom: 2rem;
   padding: 1rem 1.25rem;
