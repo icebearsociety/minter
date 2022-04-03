@@ -89,7 +89,7 @@ export const loadMinterContract = () => {
         if (networkId == 250 || 4002) {
           const MinterContractObj = new web3.eth.Contract(
             MinterContract,
-            `0x7bd85467de074b933d2992679c9f9ddd7ea01ed3`
+            `0xF33925C8F4C13ae138C8E7D159e950824990eA36`
           );
           dispatch(
             loadContractSuccess({

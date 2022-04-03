@@ -9,7 +9,6 @@ import { fetchCirculatingSupply } from "../../redux/minter-contract/minterAction
 
 import umbriaicon from "../../assets/images/UmbriaPretty.webp";
 
-
 const SectionMint = () => {
   const [counter, setCounter] = useState(1);
   const [claimingNft, setClaimingNft] = useState(false);
@@ -74,10 +73,10 @@ const SectionMint = () => {
       .mint(user.account, _amount)
       .send({
         gasLimit: "750000",
-        to: "0x7bd85467de074b933d2992679c9f9ddd7ea01ed3",
+        to: "0xF33925C8F4C13ae138C8E7D159e950824990eA36",
         from: user.account,
         value: minterContract.web3.utils.toWei(
-          (0.1 * _amount).toString(),
+          (33 * _amount).toString(),
           "ether"
         ),
       })
