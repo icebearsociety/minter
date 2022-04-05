@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 import umbriaicon from "../../assets/images/UmbriaPretty.webp";
 import heroicon from "../../assets/images/head-icon.webp";
+import test1 from "../../assets/images/bear-claw2.png";
 
 
 
@@ -78,6 +79,7 @@ const NavLinks2 = (props) => {
             <img
               src={discordIcon}
               className="discord-icon"
+              height="45px"
               alt="join the discord"
             />
           </Button>
@@ -99,22 +101,27 @@ const NavLinks2 = (props) => {
             Mint{" "}
             <img
               src={heroicon}
+              height="55px"
               className="fox-icon"
               // alt="join the discord"
             />
           </Button>
         </a>
 
-        {/* <Link className="animate-btn btn" to="/my-bears">
+        <Link className="animate-btn btn" to="/my-bears">
           My Bears
-        </Link> */}
+          <img
+            src={test1}
+            className="fox-icon"
+            height="45px"
+            // alt="join the discord"
+          />
+        </Link>
 
         <WalletCard />
       </li>
     </ul>
   );
 };
-
-
 
 export default NavLinks2;
