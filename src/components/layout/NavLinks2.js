@@ -7,6 +7,8 @@ import { connect, disconnect } from "../../redux/user/userActions";
 import { Link } from "react-router-dom";
 
 import umbriaicon from "../../assets/images/UmbriaPretty.webp";
+import heroicon from "../../assets/images/head-icon.webp";
+
 
 
 const WalletCard = () => {
@@ -66,10 +68,10 @@ const WalletCard = () => {
   );
 };
 
-const NavLinks = (props) => {
+const NavLinks2 = (props) => {
   return (
     <ul className={`nav-menu ${props.className}`}>
-      <li className="btn-collection column-list">
+      <li className="btn-collection row-list">
         <a href="https://discord.gg/xfYJtKzrby">
           <Button className="animate-btn">
             Join the Server{" "}
@@ -81,24 +83,31 @@ const NavLinks = (props) => {
           </Button>
         </a>
 
-        <a href="https://bridge.umbria.network/bridge/ethereum-fantom/eth">
+        {/* <a href="https://bridge.umbria.network/bridge/ethereum-fantom/eth">
           <button className="animate-btn btn">
             Bridge to FTM!{" "}
             <img src={umbriaicon} className="fox-icon" alt="fox icon" />
           </button>
-        </a>
+        </a> */}
 
-        <a
-          className="animate-btn btn"
-          href="#mint"
-          onClick={props.onLinkClicked}
-        >
+        {/* <a className="animate-btn" href="#mint" onClick={props.onLinkClicked}>
           Mint
+        </a> */}
+
+        <a href="#mint" onClick={props.onLinkClicked}>
+          <Button className="btn gradient-btn animate-btn">
+            Mint{" "}
+            <img
+              src={heroicon}
+              className="fox-icon"
+              // alt="join the discord"
+            />
+          </Button>
         </a>
 
-        <Link className="animate-btn btn" to="/my-bears">
+        {/* <Link className="animate-btn btn" to="/my-bears">
           My Bears
-        </Link>
+        </Link> */}
 
         <WalletCard />
       </li>
@@ -108,4 +117,4 @@ const NavLinks = (props) => {
 
 
 
-export default NavLinks;
+export default NavLinks2;
