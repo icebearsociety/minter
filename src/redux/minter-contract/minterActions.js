@@ -195,7 +195,7 @@ export const fetchNfts = () => {
           method: "POST",
 
           body: JSON.stringify({
-            ownedTokens: [1, 2, 3],
+            ownedTokens: numberArray,
           }),
 
           headers: {
