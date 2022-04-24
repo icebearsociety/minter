@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   function fakeRequest() {
-    return new Promise((resolve) => setTimeout(() => resolve(), 9500));
+    return new Promise((resolve) => setTimeout(() => resolve(), 0));
   }
 
   useEffect(() => {
