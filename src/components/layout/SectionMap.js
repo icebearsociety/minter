@@ -3,6 +3,8 @@ import "./css/section-map.css";
 import roadDots from "../../assets/layers/roadmap lines.png";
 import MediaQuery from "react-responsive";
 
+import hd from "../../assets/images/hodooi-img.png";
+
 const SectionMap = () => {
   return (
     <section className="section-map" id="roadmap">

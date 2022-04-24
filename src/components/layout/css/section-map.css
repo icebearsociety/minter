@@ -29,6 +29,11 @@
   transform: rotate(-65deg);
 }
 
+.team-img {
+  width: 100%;
+  /*   */
+}
+
 .container-narrow {
   width: 35rem;
   margin: 0 auto;

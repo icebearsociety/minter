@@ -17,6 +17,15 @@ span.tab {
   /* Or desired space*/
 }
 
+.team-img2 {
+  width: 90%;
+  object-fit: cover;
+  opacity: 0.75;
+  /* blending snow effect */
+  
+  /* border-radius: 0%; */
+}
+
 .mint-title {
   margin-bottom: 2rem;
   padding: 1rem 1.25rem;
